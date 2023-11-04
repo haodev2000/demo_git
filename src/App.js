@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <div>
-      Hello Hao 123
+      Hello Hao
       <MyComponent />
     </div>
     // <div className="App">
