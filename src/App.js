@@ -7,25 +7,13 @@ import React from 'react';
 
 class App extends React.Component {
 
-  state = {
-    name: "Hao",
-    age: 26,
-    address: "Vung Tau"
-  }
-
   render() {
     return (
       <div>
-        Tên : {this.state.name}
-        <br />
-        Tuổi : {this.state.age}
-        <br />
-        Đại chỉ : {this.state.address}
-        <br />
+        <MyComponent></MyComponent>
       </div>
     );
   }
-
 }
 
 // const App = () => {
