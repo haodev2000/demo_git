@@ -1,5 +1,6 @@
 import React from "react";
 import "./Display.scss"
+import logo from "../logo.svg"
 
 class Displayinfo extends React.Component {
 
@@ -22,7 +23,8 @@ class Displayinfo extends React.Component {
         return (
 
             <div className="display-info">
-
+                {/* <img className="logo" src={logo} /> */}
+                <br />
                 <div>
                     <span onClick={() => { this.showhideListUser() }}>
 
@@ -31,19 +33,32 @@ class Displayinfo extends React.Component {
                 </div>
 
                 {this.state.showhideList &&
-                    <div>
+                    <>
                         {listUser.map((user) => {
                             return (
                                 <div key={user.id} className={(+user.age > 18) ? "red" : "green"}>
-                                    Name : {user.name}<br />
-                                    Age : {user.age}
+                                    <div>
+                                        Name : {user.name}<br />
+                                        Age : {user.age}
+
+                                    </div>
+
                                     <hr />
+
+                                    <div>
+                                        <button onClick={() => this.props.handleDeleteUserUser(user.id)}>Delete</button>
+                                    </div>
+
                                 </div>
+
+
                             )
                         })}
 
-                    </div>
+                    </>
                 }
+
+
 
             </div>
         )

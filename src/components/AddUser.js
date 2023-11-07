@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class AddUser extends React.Component {
     state = {
         name: "",
@@ -38,7 +39,6 @@ class AddUser extends React.Component {
                 <br />
                 Đại chỉ : {this.state.address}
                 <br />
-
 
                 <form onSubmit={(event) => { this.handOnSubmit(event) }}>
                     < input
