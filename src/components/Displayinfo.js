@@ -1,4 +1,5 @@
 import React from "react";
+import "./Display.scss"
 
 class Displayinfo extends React.Component {
 
@@ -20,7 +21,7 @@ class Displayinfo extends React.Component {
         console.log(listUser);
         return (
 
-            <div>
+            <div className="display-info">
 
                 <div>
                     <span onClick={() => { this.showhideListUser() }}>
