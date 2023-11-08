@@ -4,8 +4,11 @@ import logo from "../logo.svg"
 
 class Displayinfo extends React.Component {
 
-    state = {
-        showhideList: true
+    constructor(props) {
+        super(props);
+        this.state = {
+            showhideList: true
+        }
     }
 
     showhideListUser = () => {
@@ -14,6 +17,22 @@ class Displayinfo extends React.Component {
         })
     }
 
+
+    componentDidMount() {
+        setTimeout(() => {
+            document.title = "Hao Annie";
+        }, 3000);
+
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.listUser !== prevProps.listUser) {
+            if (this.props.listUser.length === 5) {
+                alert("List user has 5")
+            }
+        }
+
+    }
 
     render() {
 
